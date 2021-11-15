@@ -4,5 +4,5 @@ localhost ansible_connection=local
 localhost
 
 [server:vars]
-ansible_python_interpreter= /usr/bin/python
+ansible_python_interpreter= auto_legacy_silent
 ansi_user= linux2
