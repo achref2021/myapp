@@ -7,20 +7,21 @@ pipeline
                     script{
                         checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
                              userRemoteConfigs: [[
-                                 credentialsId : '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',
+                                 credentialsId : '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',
                                  url: 'https://github.com/achref2021/myapp.git']]])
                                  }
                                  }
                                  }
           
                                  
-                                 }
+                                 
          stage ('docker')
          {  
                     steps{
                     sh "ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml "
                     }                        
                                  
+                                 }
                                  }
                                  }
                                  
