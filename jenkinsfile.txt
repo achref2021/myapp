@@ -7,7 +7,7 @@ pipeline
                     script{
                         checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
                              userRemoteConfigs: [[
-                                 credentialsId : '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',
+                                 credentialsId : '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',
                                  url: 'https://github.com/achref2021/myapp.git']]])
                                  }
                                  }
@@ -17,14 +17,15 @@ pipeline
                                  
          stage ('Build')
          {  
-                    script{
+                    steps{
+                          script{
                     sh "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
                     }                        
                                  
                                  }
                                  }
                                  }
-                                 
+                                 }
      
                            
                                  
