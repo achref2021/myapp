@@ -7,7 +7,7 @@ pipeline
                     script{
                         checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
                              userRemoteConfigs: [[
-                                 credentialsId : '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',
+                                 credentialsId : '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',
                                  url: 'https://github.com/achref2021/myapp.git']]])
                                  }
                                  }
@@ -21,7 +21,7 @@ pipeline
                     script{
                         checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
                              userRemoteConfigs: [[
-                                 credentialsId : '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',
+                                 credentialsId : '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',
                                  url: 'https://github.com/achref2021/myapp.git']]])
                                  }     
                                  }
@@ -32,7 +32,7 @@ pipeline
                     script{
                         checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
                              userRemoteConfigs: [[
-                                 credentialsId : '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',
+                                 credentialsId : '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',
                                  url: 'https://github.com/achref2021/myapp.git']]])
                                  }   
                                  }
@@ -43,7 +43,7 @@ pipeline
                     script{
                         checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
                              userRemoteConfigs: [[
-                                 credentialsId : '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',
+                                 credentialsId : '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',
                                  url: 'https://github.com/achref2021/myapp.git']]])
                                  }   
                                  }
