@@ -7,7 +7,7 @@ pipeline
                     script{
                         checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
                              userRemoteConfigs: [[
-                                 credentialsId : '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',
+                                 credentialsId : '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',
                                  url: 'https://github.com/achref2021/myapp.git']]])
                                  }
                                  }
@@ -17,13 +17,37 @@ pipeline
                                  
          stage ('Build')
          {  
-                    steps{
-                          script{
-                    sh "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
-                    }                        
-                                 
+                        steps{
+                    script{
+                        checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
+                             userRemoteConfigs: [[
+                                 credentialsId : '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',
+                                 url: 'https://github.com/achref2021/myapp.git']]])
+                                 }     
                                  }
                                  }
+          stage ('docker')
+         {  
+                        steps{
+                    script{
+                        checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
+                             userRemoteConfigs: [[
+                                 credentialsId : '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',
+                                 url: 'https://github.com/achref2021/myapp.git']]])
+                                 }   
+                                 }
+                                 } 
+          stage ('docker registery')
+         {  
+                        steps{
+                    script{
+                        checkout([$class: 'GitSCM' , branches : [[name : '*/master']],
+                             userRemoteConfigs: [[
+                                 credentialsId : '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',
+                                 url: 'https://github.com/achref2021/myapp.git']]])
+                                 }   
+                                 }
+                                 }                                               
                                  }
                                  }
      
